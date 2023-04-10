@@ -1,0 +1,26 @@
+{% extends "home.html" %}
+
+{% block content %}
+    {% for post in category.posts.all %}
+ <div style="margin-top: 1%">
+            <div class="container-fluid">
+                <div class="row align-items-start">
+                    <div class="col">
+                        <div class="bg-image card shadow-1-strong"
+                             style="background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(106,68,76,1) 100%);">
+                            <div class="card-body text-white">
+                                <h2>{{ post.title }}</h2>
+                                <p>Автор поста: <b>{{ post.author }}</b></p>
+                                <p>{{ post.body|truncatewords:45 }}</p>
+                                <a href='{{post.get_absolute_url}}'>
+                                    <button type="button" class="btn btn-primary">Открыть полностью</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock content %}

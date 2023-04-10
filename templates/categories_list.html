@@ -1,0 +1,20 @@
+{% extends "home.html" %}
+
+{% block content %}
+{% for cat in categories %}
+            <div style="margin-top: 1%">
+            <div class="container-fluid">
+                <div class="row align-items-start">
+                    <div class="col">
+                        <div class="bg-image card shadow-1-strong"
+                             style="background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(106,68,76,1) 100%);">
+                            <div class="card-body text-white">
+                                <h2><a href="{{ cat.get_absolute_url }}"> {{ cat.title }}</a></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
