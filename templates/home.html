@@ -34,6 +34,21 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{% url "category_list_url" %}">Категории</a>
                         </li>
+{#                        <li class="nav-item dropdown">#}
+{#                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"#}
+{#                               data-bs-toggle="dropdown" aria-expanded="false">#}
+{#                                Разделы проекта#}
+{#                            </a>#}
+{#                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">#}
+{#                                {% for i in categories %}#}
+{#                                    <a class="dropdown-item" href="{{ i.get_absolute_url }}"> {{ i.title }}</a>#}
+{#                                    <li>#}
+{#                                        <hr class="dropdown-divider">#}
+{#                                    </li>#}
+{#                                {% endfor %}#}
+{##}
+{#                            </ul>#}
+{#                        </li>#}
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                data-bs-toggle="dropdown" aria-expanded="false">
@@ -41,18 +56,14 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 {% for i in categories %}
-
-
                                     <a class="dropdown-item" href="{{ i.get_absolute_url }}"> {{ i.title }}</a>
-                                                                        <li>
+                                    <li>
                                         <hr class="dropdown-divider">
                                     </li>
                                 {% endfor %}
-                                {#                                        <li><a class="dropdown-item" href="/pozn">Москва</a></li>#}
-                                {#                                        <li><a class="dropdown-item" href="/len">Питер</a></li>#}
 
-                                {#                                        <li><a class="dropdown-item" href="/superlren">Что-то на ленивом</a></li>#}
                             </ul>
+                        </li>
                     </ul>
                 </div>
             </div>

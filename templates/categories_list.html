@@ -1,8 +1,10 @@
 {% extends "home.html" %}
 
+
+
 {% block content %}
-{% for cat in categories %}
-            <div style="margin-top: 1%">
+    {% for cat in categories %}
+        <div style="margin-top: 1%">
             <div class="container-fluid">
                 <div class="row align-items-start">
                     <div class="col">
@@ -18,3 +20,4 @@
         </div>
     {% endfor %}
 {% endblock %}
+
