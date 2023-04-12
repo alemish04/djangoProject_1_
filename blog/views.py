@@ -15,7 +15,7 @@ def post_list(request):  # отображение списка постов
         posts = Post.objects.all()
 
     # отображение нужного кол-ва постов на странице и пагинаторов
-    paginator = Paginator(posts, 2)
+    paginator = Paginator(posts, 5)
     page_number = request.GET.get("page", 1)
     page = paginator.get_page(page_number)
     is_paginated = page.has_other_pages()
